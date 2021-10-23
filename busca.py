@@ -33,7 +33,7 @@ class Tela:
         borracha2 = tk.PhotoImage(file="borracha2.png")
         self.img4 = tk.Label(janela, image=borracha2)
         self.img4.borracha2 = borracha2
-        self.img4.place(x=480, y=175)
+        self.img4.place(x=480, y=248)
         self.img4.bind("<Button-1>", self.bor2)
         
 ###########################################################################
@@ -47,35 +47,47 @@ class Tela:
         self.chaveE.config(bg="#C0C0C0", foreground="red")
         self.chaveE.place(x=270, y=130)
 
+        self.cidade = tk.Label(janela, text="Cidade:")
+        self.cidade["font"] = ("Helvetica", "17")
+        self.cidade.config(bg="white", foreground="darkblue")
+        self.cidade.place(x=150, y=180)
+
+        self.cidadeE = tk.Entry(janela)
+        self.cidadeE["font"] = ("Helvetica", "17")
+        self.cidadeE.config(bg="#C0C0C0", foreground="red")
+        self.cidadeE.place(x=270, y=180)
+
+
 
         self.mess = tk.Label(janela, text="Mês da vaga:")
         self.mess["font"] = ("Helvetica", "17")
         self.mess.config(bg="white", foreground="darkblue")
-        self.mess.place(x=80, y=180)
+        self.mess.place(x=80, y=250)
 
         meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
         self.mesE = ttk.Combobox(janela, values=meses)
         self.mesE["font"] = ("Helvetica", "17")
-        self.mesE.place(x=270, y=180, width=200)
+        self.mesE.place(x=270, y=250, width=200)
         
         
 
         self.buscar = tk.Button(janela, text="Buscar")
         self.buscar["font"] = ("Helvetica", "17")
         self.buscar.config(bg="#FFD700", foreground="black")
-        self.buscar.place(x=320, y=270)
+        self.buscar.place(x=320, y=300)
         self.buscar.bind("<Button-1>", self.buscarr)
 
         self.limpar = tk.Button(janela, text="Limpar")
         self.limpar["font"] = ("Helvetica", "17")
         self.limpar.config(bg="red", foreground="white")
-        self.limpar.place(x=200, y=270)
+        self.limpar.place(x=200, y=300)
         self.limpar.bind("<Button-1>", self.limparr)
 
     def buscarr(self, event):
 
         chave = self.chaveE.get()
         mes = self.mesE.get()
+        cidade = self.cidadeE.get()
 
         if mes == "JANEIRO":
             mes = "01"
@@ -113,7 +125,8 @@ class Tela:
         if mes == "DEZEMBRO":
             mes = "12"
 
-        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2021/{}".format(chave,mes))
+            
+        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2021/{}+intext:{}".format(chave,mes,cidade))
         os.system(b)
 
     def limparr(self, event):
