@@ -21,7 +21,7 @@ class Tela:
         rodape = tk.PhotoImage(file="rodape.png")
         img2 = tk.Label(janela, image=rodape)
         img2.rodape = rodape
-        img2.place(x=0, y=350)
+        img2.place(x=0, y=370)
 
         borracha = tk.PhotoImage(file="borracha.png")
         self.img3 = tk.Label(janela, image=borracha)
