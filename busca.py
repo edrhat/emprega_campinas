@@ -4,7 +4,7 @@ from tkinter import ttk
 
 #chave = input("Palavra chave: ")
 
-#b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2021".format(chave))
+#b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2022".format(chave))
 #os.system(b)
 
 class Tela:
@@ -126,7 +126,7 @@ class Tela:
             mes = "12"
 
             
-        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2021/{}+intext:{}".format(chave,mes,cidade))
+        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2022/{}+intext:{}".format(chave,mes,cidade))
         os.system(b)
 
     def limparr(self, event):
