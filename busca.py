@@ -90,43 +90,43 @@ class Tela:
         cidade = self.cidadeE.get()
 
         if mes == "JANEIRO":
-            mes = "01"
+            mes = "01/2023"
         
         if mes == "FEVEREIRO":
-            mes = "02"
+            mes = "02/2023"
 
         if mes == "MARÇO":
-            mes = "03"
+            mes = "03/2023"
 
         if mes == "ABRIL":
-            mes = "04"
+            mes = "04/2023"
 
         if mes == "MAIO":
-            mes = "05"
+            mes = "05/2023"
 
         if mes == "JUNHO":
-            mes = "06"
+            mes = "06/2023"
 
         if mes == "JULHO":
-            mes = "07"
+            mes = "07/2023"
 
         if mes == "AGOSTO":
-            mes = "08"
+            mes = "08/2023"
 
         if mes == "SETEMBRO":
-            mes = "09"
+            mes = "09/2023"
 
         if mes == "OUTUBRO":
-            mes = "10"
+            mes = "10/2023"
 
         if mes == "NOVEMBRO":
-            mes = "11"
+            mes = "11/2023"
 
         if mes == "DEZEMBRO":
-            mes = "12"
+            mes = "12/2023"
 
             
-        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+inurl:2022/{}+intext:{}".format(chave,mes,cidade))
+        b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+intext:{}+intext:{}".format(chave,cidade,mes))
         os.system(b)
 
     def limparr(self, event):
