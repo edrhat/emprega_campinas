@@ -90,40 +90,40 @@ class Tela:
         cidade = self.cidadeE.get()
 
         if mes == "JANEIRO":
-            mes = "01/2023"
+            mes = "01/2024"
         
         if mes == "FEVEREIRO":
-            mes = "02/2023"
+            mes = "02/2024"
 
         if mes == "MARÇO":
-            mes = "03/2023"
+            mes = "03/2024"
 
         if mes == "ABRIL":
-            mes = "04/2023"
+            mes = "04/2024"
 
         if mes == "MAIO":
-            mes = "05/2023"
+            mes = "05/2024"
 
         if mes == "JUNHO":
-            mes = "06/2023"
+            mes = "06/2024"
 
         if mes == "JULHO":
-            mes = "07/2023"
+            mes = "07/2024"
 
         if mes == "AGOSTO":
-            mes = "08/2023"
+            mes = "08/2024"
 
         if mes == "SETEMBRO":
-            mes = "09/2023"
+            mes = "09/2024"
 
         if mes == "OUTUBRO":
-            mes = "10/2023"
+            mes = "10/2024"
 
         if mes == "NOVEMBRO":
-            mes = "11/2023"
+            mes = "11/2024"
 
         if mes == "DEZEMBRO":
-            mes = "12/2023"
+            mes = "12/2024"
 
             
         b = ("start chrome https://www.google.com/search?q=site%3Aempregacampinas.com.br+%22{}%22+intext:{}+intext:{}".format(chave,cidade,mes))
